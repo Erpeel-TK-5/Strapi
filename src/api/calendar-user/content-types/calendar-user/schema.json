@@ -1,0 +1,55 @@
+{
+  "kind": "collectionType",
+  "collectionName": "calendar_users",
+  "info": {
+    "singularName": "calendar-user",
+    "pluralName": "calendar-users",
+    "displayName": "calendarUser"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "username": {
+      "type": "string"
+    },
+    "password": {
+      "type": "password"
+    },
+    "timezone": {
+      "type": "string"
+    },
+    "bahasa": {
+      "type": "string"
+    },
+    "modeKalender": {
+      "type": "string"
+    },
+    "durasiFocusTimer": {
+      "type": "integer"
+    },
+    "nama": {
+      "type": "string"
+    },
+    "email": {
+      "type": "email"
+    },
+    "fotoPengguna": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "listEvent": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::event.event",
+      "mappedBy": "dibuatOleh"
+    }
+  }
+}
