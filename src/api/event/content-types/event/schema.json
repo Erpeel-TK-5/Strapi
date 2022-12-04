@@ -8,24 +8,29 @@
     "description": ""
   },
   "options": {
-    "draftAndPublish": true
+    "draftAndPublish": false
   },
   "pluginOptions": {},
   "attributes": {
     "title": {
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "startDate": {
-      "type": "datetime"
+      "type": "datetime",
+      "required": true
     },
     "endDate": {
-      "type": "datetime"
+      "type": "datetime",
+      "required": true
     },
     "isPublic": {
-      "type": "boolean"
+      "type": "boolean",
+      "default": false
     },
     "isRecurring": {
-      "type": "boolean"
+      "type": "boolean",
+      "default": false
     },
     "notes": {
       "type": "text"

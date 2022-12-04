@@ -4,46 +4,61 @@
   "info": {
     "singularName": "calendar-user",
     "pluralName": "calendar-users",
-    "displayName": "calendarUser"
+    "displayName": "calendarUser",
+    "description": ""
   },
   "options": {
-    "draftAndPublish": true
+    "draftAndPublish": false
   },
   "pluginOptions": {},
   "attributes": {
     "username": {
-      "type": "string"
+      "type": "string",
+      "required": true,
+      "unique": true
     },
     "password": {
-      "type": "password"
+      "type": "password",
+      "required": true,
+      "minLength": 8,
+      "private": true
     },
     "timezone": {
-      "type": "string"
+      "type": "string",
+      "required": false,
+      "default": "+00:00"
     },
     "bahasa": {
-      "type": "string"
+      "type": "string",
+      "default": "ID-id"
     },
     "modeKalender": {
-      "type": "string"
+      "type": "string",
+      "default": "default"
     },
     "durasiFocusTimer": {
-      "type": "integer"
+      "type": "integer",
+      "default": 0
     },
     "nama": {
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "email": {
-      "type": "email"
+      "type": "email",
+      "required": true,
+      "unique": true
     },
     "fotoPengguna": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
-      ],
-      "type": "media",
-      "multiple": false
+      ]
     },
     "listEvent": {
       "type": "relation",
