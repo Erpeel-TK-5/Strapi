@@ -4,7 +4,8 @@
   "info": {
     "singularName": "reminder",
     "pluralName": "reminders",
-    "displayName": "reminder"
+    "displayName": "reminder",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -12,7 +13,8 @@
   "pluginOptions": {},
   "attributes": {
     "waktuSebelumEvent": {
-      "type": "datetime"
+      "type": "datetime",
+      "required": true
     }
   }
 }
