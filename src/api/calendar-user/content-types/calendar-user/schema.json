@@ -17,11 +17,6 @@
       "required": true,
       "unique": true
     },
-    "password": {
-      "type": "password",
-      "required": true,
-      "minLength": 8
-    },
     "timezone": {
       "type": "string",
       "required": false,
@@ -64,6 +59,11 @@
       "relation": "oneToMany",
       "target": "api::event.event",
       "mappedBy": "dibuatOleh"
+    },
+    "password": {
+      "type": "string",
+      "required": true,
+      "minLength": 8
     }
   }
 }
